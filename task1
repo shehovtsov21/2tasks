@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Список фруктов</title>
+    <style type="text/css">
+        ol.fruit-list {
+            background-color: #f5a3b7;
+            padding: 25px;
+            width: 380px;
+            margin: 20px auto;
+            font-family: Calibri, sans-serif;
+            list-style: none;
+            counter-reset: fruit-counter;
+        }
+
+        ol.fruit-list li {
+            background-color: #d96381;
+            margin-bottom: 12px;
+            padding: 10px;
+            counter-increment: fruit-counter;
+        }
+
+        ol.fruit-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        ol.fruit-list li span {
+            background-color: #9c3350;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 6px 16px;
+            display: inline-block;
+        }
+
+        ol.fruit-list li span::before {
+            content: counter(fruit-counter) ". ";
+            margin-right: 12px;
+        }
+    </style>
+</head>
+<body>
+    <ol class="fruit-list">
+        <li><span>Apple</span></li>
+        <li><span>Orange</span></li>
+        <li><span>Pineapple</span></li>
+        <li><span>Pear</span></li>
+        <li><span>Cherry</span></li>
+    </ol>
+</body>
+</html>
